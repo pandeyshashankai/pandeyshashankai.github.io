@@ -55,8 +55,8 @@
     <!-- 3️⃣ Quick Stats Bar -->
     <section class="stats container reveal">
         <div class="stat-card">
-            <h3>01</h3>
-            <p>Active Project</p>
+            <h3>02</h3>
+            <p>Active Projects</p>
         </div>
         <div class="stat-card">
             <h3>01+</h3>
@@ -132,6 +132,7 @@
                         <span class="pill">HTML5</span>
                         <span class="pill">CSS3</span>
                         <span class="pill">Python</span> 
+                        <span class="pill">JavaScript</span>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -171,24 +172,30 @@
                 <h2>My Projects</h2>
             </div>
             <div class="grid-2">
+                <!-- Project 1: Personal Portfolio -->
                 <div class="card project-card">
-                    <!-- Updated Project Image Wrapper with your screenshot -->
                     <div class="project-image">
                         <img src="project1.png" alt="Screenshot of Personal Portfolio Homepage">
                     </div>
                     <div class="status-badge live">🟢 Live</div>
                     <h3>Personal Portfolio</h3>
                     <p>A modern, responsive website designed to document my coding journey and showcase my future projects.</p>
-                    <div class="tech-stack">HTML &bull; CSS &bull; JavaScript</div>
+                    <div class="tech-stack" style="margin-top: auto; padding-bottom: 1.5rem;">HTML &bull; CSS &bull; JavaScript</div>
+                    <a href="#home" class="btn btn-outline" style="display: block; text-align: center;">You Are Here 📍</a>
                 </div>
+
+                <!-- Project 2: Fitness Pro Ultra -->
                 <div class="card project-card">
                     <div class="project-image">
-                        <span style="color: var(--text-secondary);">Image Placeholder</span>
+                        <!-- Upload your app screenshot to your repo, then replace the span below with the img tag -->
+                        <span style="color: var(--text-secondary);">Fitness Pro Ultra Screenshot</span>
+                         <img src="fitness-screenshot.png" alt="Screenshot of Fitness Pro Ultra">
                     </div>
-                    <div class="status-badge planning">🟡 Planning Phase</div>
-                    <h3>Upcoming Project</h3>
-                    <p>I am currently focusing on expanding my skills and brainstorming my next build. Check back soon for updates!</p>
-                    <div class="tech-stack">HTML &bull; CSS &bull; Python</div>
+                    <div class="status-badge live">🟢 Live</div>
+                    <h3>Fitness Pro Ultra</h3>
+                    <p>A modern health companion app featuring BMI and Body Fat calculators, daily streak tracking, and 7-day fitness plans with English/Hindi support.</p>
+                    <div class="tech-stack" style="margin-top: auto; padding-bottom: 1.5rem;">HTML &bull; CSS &bull; JavaScript</div>
+                    <a href="https://pandeyshashankai.github.io/fitness-pro-ultra/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: block; text-align: center;">View Project &rarr;</a>
                 </div>
             </div>
         </div>
@@ -244,7 +251,7 @@
         const reveals = document.querySelectorAll('.reveal');
         
         const revealOptions = {
-            threshold: 0.15, // Triggers when 15% of the element is visible
+            threshold: 0.15,
             rootMargin: "0px 0px -50px 0px" 
         };
 
@@ -254,7 +261,7 @@
                     return;
                 } else {
                     entry.target.classList.add('active');
-                    observer.unobserve(entry.target); // Stop observing once revealed
+                    observer.unobserve(entry.target);
                 }
             });
         }, revealOptions);
